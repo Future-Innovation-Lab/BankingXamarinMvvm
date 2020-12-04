@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BasePage  xmlns:views="clr-namespace:BankingXamarin.Views" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BankingXamarin.BankingPage" Title="Banking Example">
+    <ScrollView>
+    <StackLayout Orientation="Vertical">
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Banking Example" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+            <Label Text="Deposit Amount" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry Placeholder="Deposit Amount" Keyboard="Numeric" Text="{Binding DepositAmount}" />
+            <Entry Placeholder="Deposit Reason" Text="{Binding DepositReason}"/>
+        <Button Text="Deposit" Command="{Binding DepositCommand}"/>
+
+            <Label Text="Withdraw Amount" FontSize="Medium" FontAttributes="Bold"/>
+            <Entry  Placeholder="Withdraw Amount" Keyboard="Numeric" Text="{Binding WithdrawAmount}" />
+            <Entry  Placeholder="Deposit Reason" Text="{Binding WithdrawReason}"/>
+        <Button Text="Withdraw" Command="{Binding WithdrawCommand}"/>
+
+        <Button  Text="Display Transactions" Command="{Binding DisplayTransactionsCommand}"/>
+        <Label Text="{Binding TransactionsText}"/>
+    </StackLayout>
+    </ScrollView>
+</views:BasePage>
